@@ -18,7 +18,7 @@ function draw() {
   background("white");
 
     let x = width/2.25; 
-  let y = width/1.9; 
+  let y = height/1.96; 
   let d = 250; 
   let e = 70; 
    
