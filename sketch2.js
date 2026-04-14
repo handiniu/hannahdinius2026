@@ -11,8 +11,8 @@ var my = [];
   let speed = 2;
 
 function preload(){
-  poster = loadImage('Mendoza Cursor.jpg');
-  vandercook = loadImage('Vandercook.jpg');
+  poster = loadImage('mendozacursor.jpg');
+  vandercook = loadImage('vandercook.jpg');
 }
  
 function setup() {
