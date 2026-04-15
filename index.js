@@ -3,7 +3,7 @@ let cursorImg;
 
 //Pointing finger cursor
 function preload(){
-  cursorImg = loadImage("pointerfinger.png");
+  cursorImg = loadImage("pointerfingerS1.png");
   //Upload a new image with as a png so there is no white background
   //resource https://editor.p5js.org/xinxin/sketches/6GBSGiQGT
 }
