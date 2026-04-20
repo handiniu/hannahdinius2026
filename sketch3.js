@@ -6,8 +6,8 @@ let imgRight;
 let yRight;
 
 function preload() {
-  imgLeft = loadImage("poster1.png");
-  imgRight = loadImage("poster1.png");
+  imgLeft = loadImage("firstfiveposters.jpg");
+  imgRight = loadImage("lastfiveposters.jpg");
 }
   function setup() {
     createCanvas(windowWidth, windowHeight);
@@ -28,10 +28,11 @@ function preload() {
   if (yRight >= imgRight.height) {
     yRight = 0;
   }
-   image(imgLeft, 0, yLeft);
-  image(imgLeft, 0, yLeft + imgLeft.height);
-
-  image(imgRight, 250, yRight);
-  image(imgRight, 250, yRight - imgRight.height);
+imageMode(LEFT);
+   image(imgLeft, 10, yLeft);
+  image(imgLeft, 10, yLeft + imgLeft.height);
+imageMode(RIGHT);
+  image(imgRight, 800, yRight);
+  image(imgRight, 800, yRight - imgRight.height);
 
   }

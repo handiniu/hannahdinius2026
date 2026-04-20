@@ -1,4 +1,5 @@
 let cursorImg;
+let ratio; 
 
 
 //Pointing finger cursor
@@ -17,8 +18,8 @@ function draw() {
   
   background("white");
 
-    let x = width/2.25; 
-  let y = height/1.96; 
+  let x = width/2; 
+  let y = height/2; 
   let d = 250; 
   let e = 70; 
    
@@ -33,7 +34,7 @@ function draw() {
   textFont("Caprasimo");
   textSize(24);
   textAlign(CENTER);
-  text("Press To Start",x, y + 10);
+  text("Press To Start", x, y + 10);
     
   
   
@@ -41,31 +42,19 @@ function draw() {
   imageMode(CENTER); 
    image(cursorImg, mouseX, mouseY);
 
-if(mouseIsPressed) {
-  click(); 
-}
-  
 }
 
 
-//function click(){
-  //let x = width/2; 
- // let y = width/2; 
-  //let d = 400; 
-  //let e = 100; 
-
-//  let link = dist(mouseX, mouseY, x, y); 
-
- // if (link <= 45)
-//{
- // window.open('page2.html');
-
-//}
 function mousePressed(){ 
    let d = dist(mouseX,mouseY,width/2,height/2);
-  if (d<50){
-  window.open('page2.html');
+  if (d <= 100){
+  window.open('page2.html', '_self');
 
   }
   return false;
 }
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);  
+}
+

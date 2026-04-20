@@ -7,7 +7,7 @@ var my = [];
 
 //Welcome rolling text variables
  let msg = "WELCOME TO LETTERPRESS 101*";
-  let xPos = 0;
+  let xPos = 600;
   let speed = 2;
 
 function preload(){
@@ -32,7 +32,9 @@ function draw() {
   background("white");
   //curosr image in the center of the cursor
    //image(cursorImg, mouseX, mouseY);
-  image(vandercook, width/2 , height/2 )
+  imageMode(CENTER);
+   image(vandercook, width/2 , height/2 );
+
  //fill("red")
   textFont("Caprasimo");
  // textSize(24);
@@ -42,8 +44,8 @@ function draw() {
   // Source - https://stackoverflow.com/a/69163918
 // Posted by Rabbid76
 // Retrieved 2026-04-06, License - CC BY-SA 4.0
- frameRate(30); 
-    var array_pos = frameCount % num; 
+  frameRate(30); 
+    var array_pos = frameCount/.5 % num; 
     mx[array_pos] = mouseX; 
     my[array_pos] = mouseY; 
 
@@ -53,36 +55,32 @@ function draw() {
   //here i will want to instruct how to move through the array of images I will upload
       var index = (array_pos + 1 + i) % num; 
     image(poster, mx[index], my[index], i, i); 
+    }
       
-        textStyle("bold");
-     fill("red");
+    
+    textStyle("bold");
+    fill("red");
   // Draw the text
- text(msg, xPos, 60);
+    text(msg, xPos, 60);
       
   // Create the seamless loop:
   // Draw a second copy immediately after the first
-  fill("red");
-  text(msg, xPos + textWidth(msg), 60);
-
-  
+  //text(msg, xPos + textWidth(msg), 60);
   // Move to the left
-//xPos -= ( 3, speed);
+   xPos  = xPos - speed;
   
   // Reset when the first copy is fully off-screen
   if (xPos < -textWidth(msg)) {
-    xPos = 0;
-     
-    }
-if(mouseIsPressed) {
-  click(); 
+    xPos = windowWidth -200;  
+  }
+
 }
+
 function mousePressed(){ 
    let d = dist(mouseX,mouseY,width/2,height/2);
-  if (d<100){
-  window.open('page2.html');
+  if (d <= 100){
+  window.open('page3.html', '_self');
 
   }
   return false;
 }
-    }
-  }
