@@ -61,6 +61,7 @@ function draw() {
       
   // Create the seamless loop:
   // Draw a second copy immediately after the first
+  fill("red");
   text(msg, xPos + textWidth(msg), 60);
 
   
