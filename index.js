@@ -48,17 +48,24 @@ if(mouseIsPressed) {
 }
 
 
-function click(){
-  let x = width/2; 
-  let y = width/2; 
-  let d = 250; 
-  let e = 70; 
+//function click(){
+  //let x = width/2; 
+ // let y = width/2; 
+  //let d = 400; 
+  //let e = 100; 
 
-  let link = dist(mouseX, mouseY, x, y); 
+//  let link = dist(mouseX, mouseY, x, y); 
 
-  if (link <= 35)
-{
+ // if (link <= 45)
+//{
+ // window.open('page2.html');
+
+//}
+function mousePressed(){ 
+   let d = dist(mouseX,mouseY,width/2,height/2);
+  if (d<50){
   window.open('page2.html');
 
-}
+  }
+  return false;
 }
