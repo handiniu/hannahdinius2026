@@ -23,7 +23,7 @@ function setup() {
    textSize(32);
   textAlign(CENTER, CENTER);
   fill(0);
- text('Custom Font Loaded!', width / 2, height / 2);
+ text('Custom Font Loaded!', width/1.5, height/2);
 
   
 }
@@ -32,7 +32,7 @@ function draw() {
   background("white");
   //curosr image in the center of the cursor
    //image(cursorImg, mouseX, mouseY);
-  image(vandercook, 2 , 2 )
+  image(vandercook, width/2 , height/2 )
  //fill("red")
   textFont("Caprasimo");
  // textSize(24);
@@ -70,10 +70,18 @@ function draw() {
   // Reset when the first copy is fully off-screen
   if (xPos < -textWidth(msg)) {
     xPos = 0;
-      
- 
+     
     }
-
-
+if(mouseIsPressed) {
+  click(); 
 }
+function mousePressed(){ 
+   let d = dist(mouseX,mouseY,width/2,height/2);
+  if (d<100){
+  window.open('page2.html');
+
+  }
+  return false;
 }
+    }
+  }
