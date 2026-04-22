@@ -6,7 +6,7 @@ var mx = [];
 var my = []; 
 
 //Welcome rolling text variables
- let msg = "WELCOME TO LETTERPRESS 101*";
+ let msg = "WELCOME TO LETTERPRESS 101* WELCOME TO LETTERPRESS 101*";
   let xPos = 600;
   let speed = 2;
 
@@ -20,8 +20,8 @@ function setup() {
     noCursor();
 
   
-   textSize(32);
-  textAlign(CENTER, CENTER);
+   textSize(48);
+ // textAlign(CENTER, CENTER);
   fill(0);
  text('Custom Font Loaded!', width/1.5, height/2);
 
