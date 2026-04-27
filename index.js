@@ -24,7 +24,7 @@ function draw() {
   let e = 70; 
    
   //Start button
-  fill("red");
+  fill('darkred');
   noStroke();
   ellipse(x, y, d, e);
   //resource for ellipse and how to center align it with the canvas https://editor.p5js.org/dipikatitus/sketches/27ebpsz1A

@@ -1,6 +1,7 @@
 let cursorImg;
 let poster; 
 let vandercook;
+let button;
 var num = 60; 
 var mx = []; 
 var my = []; 
@@ -12,7 +13,8 @@ var my = [];
 
 function preload(){
   poster = loadImage('mendozacursor.jpg');
-  vandercook = loadImage('vandercook.jpg');
+  vandercook = loadImage('vandercook.png');
+   button = loadImage("nextbutton.png");
 }
  
 function setup() {
@@ -20,7 +22,7 @@ function setup() {
     noCursor();
 
   
-   textSize(48);
+   textSize(84);
  // textAlign(CENTER, CENTER);
   fill(0);
  text('Custom Font Loaded!', width/1.5, height/2);
@@ -29,11 +31,14 @@ function setup() {
 }
 
 function draw() {
-  background("white");
+  background("darkred");
   //curosr image in the center of the cursor
    //image(cursorImg, mouseX, mouseY);
   imageMode(CENTER);
    image(vandercook, width/2 , height/2 );
+
+   imageMode(CENTER);
+    image(button, width/7, height/2);
 
  //fill("red")
   textFont("Caprasimo");
@@ -59,9 +64,9 @@ function draw() {
       
     
     textStyle("bold");
-    fill("red");
+    fill("white");
   // Draw the text
-    text(msg, xPos, 60);
+    text(msg, xPos, 70);
       
   // Create the seamless loop:
   // Draw a second copy immediately after the first
@@ -71,7 +76,7 @@ function draw() {
   
   // Reset when the first copy is fully off-screen
   if (xPos < -textWidth(msg)) {
-    xPos = windowWidth -200;  
+    xPos = windowWidth -200; 
   }
 
 }
