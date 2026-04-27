@@ -31,6 +31,7 @@ function draw() {
 
   
   fill("white");
+  //custom font upload
   textFont("Caprasimo");
   textSize(24);
   textAlign(CENTER);

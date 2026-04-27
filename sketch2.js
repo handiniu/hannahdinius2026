@@ -1,7 +1,9 @@
 let cursorImg;
 let poster; 
 let vandercook;
+//button variable for next page through vandercook image
 let button;
+//variable for rolling text
 var num = 60; 
 var mx = []; 
 var my = []; 

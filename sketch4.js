@@ -16,6 +16,7 @@ function draw() {
   background("white");
   //image loaded in the center of the canvas for scrolling
 imageMode(CENTER);
+//extended the image to fill the canvas
    image(scroll, 1500/2, 3380/2);
 
    textFont("Caprasimo");

@@ -30,6 +30,7 @@ function preload() {
   if (yRight >= imgRight.height) {
     yRight = 0;
   }
+  //image to make the posters scroll up and down the screen
 imageMode(LEFT);
    image(imgLeft, 10, yLeft);
   image(imgLeft, 10, yLeft + imgLeft.height);
@@ -38,6 +39,7 @@ imageMode(RIGHT);
   image(imgRight, 800, yRight - imgRight.height);
   
   }
+  // sensativity for the mouse click to open the next page
   function mousePressed(){ 
    let d = dist(mouseX,mouseY,10,height/2);
   if (d <= 600){
